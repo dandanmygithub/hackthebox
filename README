@@ -1,2 +1,7 @@
 grep -iRl "pass" 2>dev/null
 find . -maxdepth 1 -name "*string*" -print
+
+dirb
+dirbuster
+dirsearch/dirsearch.py -u http://192.168.1.72/ -e php -x 301,302,403
+
